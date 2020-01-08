@@ -4,7 +4,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/index")
+// @RequestMapping("/index")
+@RequestMapping
 
 class IndexCtrl {
     @RequestMapping("/login")
