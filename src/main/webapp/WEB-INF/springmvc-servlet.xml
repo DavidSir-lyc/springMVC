@@ -26,6 +26,11 @@
     <!-- 支持mvc注解驱动 -->
     <mvc:annotation-driven />
 
+    <!--
+        InternalResourceViewResolver 是使用的最广泛的一个视图解析器,是 URLBasedViewResolver 的子类
+        prefix:前缀配置
+        suffix:后缀配置
+    -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/jsp/" />
         <property name="suffix" value=".jsp" />
