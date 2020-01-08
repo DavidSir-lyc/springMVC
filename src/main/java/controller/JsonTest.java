@@ -1,6 +1,7 @@
 package controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -22,6 +23,7 @@ class JsonTest {
     }*/
     @RequestMapping("/jsonTest01")
     @ResponseBody
+    @CrossOrigin(origins = "*", maxAge = 3600)
     public Map<String,Object> doMapJsonString(){
         Map<String, Object> map = new LinkedHashMap<>();
         map.put("id", 100);
