@@ -12,14 +12,6 @@ import java.util.*;
 
 @Controller
 class JsonTest {
-   /* *//**
-     * 接收页面请求的JSON参数，并返回JSON格式的结果
-     *//*
-    @RequestMapping(".do")
-    @ResponseBody
-    public String testJson() {
-        return "{name: 'lyc'}";
-    }*/
     @RequestMapping("/jsonTest01")
     @ResponseBody
     @CrossOrigin(origins = "*", maxAge = 3600)
@@ -31,7 +23,6 @@ class JsonTest {
         // System.out.println(JSON.toJSON(map));
         // System.out.println(JSON.toJSONString(map));
         return (Map<String, Object>) JSON.toJSON(map);
-        //系统底层会基于返回值查找对应的转换,将对象转换为指定格式的字符串
     }
 
     @RequestMapping("/jsonTest02")
@@ -49,7 +40,6 @@ class JsonTest {
         list.add(map);
         // System.out.println(JSON.toJSONString(list));
         return list;
-        //系统底层会基于返回值查找对应的转换,将对象转换为指定格式的字符串
     }
 
     /**
