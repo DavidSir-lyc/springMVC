@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import com.alibaba.fastjson.JSON;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -28,7 +29,10 @@ class JsonTest {
         Map<String, Object> map = new LinkedHashMap<>();
         map.put("id", 100);
         map.put("name", "BeiJing");
-        return map;
+        // return JSON.parseObject(String.valueOf(map));
+        // System.out.println(JSON.toJSON(map));
+        // System.out.println(JSON.toJSONString(map));
+        return (Map<String, Object>) JSON.toJSON(map);
         //系统底层会基于返回值查找对应的转换,将对象转换为指定格式的字符串
     }
 
@@ -44,6 +48,7 @@ class JsonTest {
         map.put("id", 200);
         map.put("name", "ShangHai");
         list.add(map);
+        // System.out.println(JSON.toJSONString(list));
         return list;
         //系统底层会基于返回值查找对应的转换,将对象转换为指定格式的字符串
     }
