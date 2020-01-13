@@ -20,7 +20,7 @@
 
     <!--      注解方式handlerMapping配置      -->
     <!-- 使用扫描机制扫描控制器类，控制器类都在controller包及其子包下 -->
-    <context:component-scan base-package="controller" />
+    <context:component-scan base-package="lyc.java.SSM.controller" />
     <!-- Spring MVC不处理静态资源 -->
     <mvc:default-servlet-handler />
     <!-- 支持mvc注解驱动 -->
