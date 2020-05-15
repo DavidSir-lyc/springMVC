@@ -26,7 +26,6 @@
         </environment>
     </environments>
     <mappers>
-        <mapper resource="mappers/UserMapper_selectOne.xml"/>
         <mapper resource="mappers/UserMapper_getMapper.xml"/>
     </mappers>
 </configuration>
