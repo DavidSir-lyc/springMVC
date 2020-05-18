@@ -6,8 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="springMVC" />
         <module name="LspringMVC" />
+        <module name="springMVC" />
       </profile>
     </annotationProcessing>
   </component>
